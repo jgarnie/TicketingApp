@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import prisma from '../../prisma/db';
+import DataTable from './DataTable';
 
-const Tickets = () => {
-  return (
-    <div>Tickets</div>
-  )
-}
+const Tickets = async () => {
+  const ticketList = await prisma.ticket.findMany();
+  console.log({ ticketList });
 
-export default Tickets
+  return <DataTable tickets={ticketList} />;
+};
+
+export default Tickets;
