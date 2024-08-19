@@ -1,4 +1,3 @@
-import { Priority } from '@prisma/client';
 import { z } from 'zod';
 
 export const ticketSchema = z.object({

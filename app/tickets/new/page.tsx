@@ -1,12 +1,14 @@
-'use client';
-
 import React from 'react';
-import TicketForm from '../../../components/ticket-form';
+import dynamic from 'next/dynamic';
+
+const TicketForm = dynamic(() => import('@/components/ticket-form'), {
+  ssr: false,
+});
 
 function NewTicket() {
   return (
     <div>
-      <TicketForm></TicketForm>
+      <TicketForm />
     </div>
   );
 }
