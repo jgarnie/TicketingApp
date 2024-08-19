@@ -10,6 +10,7 @@ import {
 } from '../../components/ui/table';
 import TicketStatusBadge from '../../components/ui/TicketStatusBadge';
 import TicketPriority from '../../components/ui/TicketPriority';
+import Link from 'next/link';
 
 interface Props {
   tickets: Ticket[];
@@ -35,7 +36,9 @@ function DataTable({ tickets }: Props) {
             {tickets
               ? tickets.map((ticket) => (
                   <TableRow key={ticket.id} data-href="/">
-                    <TableCell>{ticket.title}</TableCell>
+                    <TableCell>
+                      <Link href={`tickets/${ticket.id}`}> {ticket.title}</Link>
+                    </TableCell>
                     <TableCell>
                       <TicketStatusBadge status={ticket.status} />
                     </TableCell>
