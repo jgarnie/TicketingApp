@@ -6,11 +6,7 @@ const TicketForm = dynamic(() => import('@/components/ticket-form'), {
 });
 
 function NewTicket() {
-  return (
-    <div>
-      <TicketForm />
-    </div>
-  );
+  return <TicketForm />;
 }
 
 export default NewTicket;
