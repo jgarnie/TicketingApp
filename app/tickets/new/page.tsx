@@ -1,7 +1,7 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
 
-const TicketForm = dynamic(() => import('@/components/ticket-form'), {
+const TicketForm = dynamic(() => import('@/components/TicketForm'), {
   ssr: false,
 });
 

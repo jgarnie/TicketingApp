@@ -1,9 +1,8 @@
-import React from 'react'
+import React from 'react';
+import UserForm from '../../components/UserForm';
 
 const Users = () => {
-  return (
-    <div>Users</div>
-  )
-}
+  return <UserForm />;
+};
 
-export default Users
+export default Users;

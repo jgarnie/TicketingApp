@@ -6,7 +6,7 @@ interface Props {
   params: { id: string };
 }
 
-const TicketForm = dynamic(() => import('@/components/ticket-form'), {
+const TicketForm = dynamic(() => import('@/components/TicketForm'), {
   ssr: false,
 });
 

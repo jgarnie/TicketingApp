@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import { Form, FormControl, FormField, FormItem, FormLabel } from './ui/form';
-import { ticketSchema } from '../validation-schemas/ticket';
+import { ticketSchema } from '../validationSchemas/ticket';
 import { z } from 'zod';
 import { Controller, useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
