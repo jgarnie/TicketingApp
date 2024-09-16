@@ -21,7 +21,7 @@ const NavLinks = ({ role }: { role?: string }) => {
   return (
     <div className="flex items-center gap-2">
       {links
-        .filter((link) => !link.adminOnly || role !== 'ADMIN')
+        .filter((link) => !link.adminOnly || role === 'ADMIN')
         .map((link) => (
           <Link
             href={link.href}
