@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { userSchema } from '../../../validationSchemas/users';
 import prisma from '../../../prisma/db';
 import bcrypt from 'bcryptjs';
+
 export async function POST(request: NextRequest) {
   const body = await request.json();
   const validation = userSchema.safeParse(body);

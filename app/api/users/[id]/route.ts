@@ -1,8 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
-import prisma from '../../../prisma/db';
+import prisma from '../../../../prisma/db';
 import bcrypt from 'bcryptjs';
-import { userSchema } from '../../../validationSchemas/users';
-import { use } from 'react';
+import { userSchema } from '../../../../validationSchemas/users';
 
 interface Props {
   params: { id: string };
@@ -21,9 +20,11 @@ export async function PATCH(request: NextRequest, { params }: Props) {
   if (!user)
     return NextResponse.json({ messge: 'User not found.' }, { status: 404 });
 
-  if (body?.password) {
+  if (body?.password && body?.password != '') {
     const hashPassword = await bcrypt.hash(body.password, 10);
     body.password = hashPassword;
+  } else {
+    delete body.password;
   }
 
   if (user.username !== body.username) {
