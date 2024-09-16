@@ -8,8 +8,8 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import TicketStatusBadge from '../../../components/ui/TicketStatusBadge';
-import TicketPriority from '../../../components/ui/TicketPriority';
+import TicketStatusBadge from '../../../components/TicketStatusBadge';
+import TicketPriority from '../../../components/TicketPriority';
 import Link from 'next/link';
 import { buttonVariants } from '@/components/ui/button';
 import ReactMarkDown from 'react-markdown';

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Badge } from './badge';
+import { Badge } from './ui/badge';
 import { Status } from '@prisma/client';
 
 interface Props {

@@ -8,8 +8,8 @@ import {
   TableHeader,
   TableRow,
 } from '../../components/ui/table';
-import TicketStatusBadge from '../../components/ui/TicketStatusBadge';
-import TicketPriority from '../../components/ui/TicketPriority';
+import TicketStatusBadge from '../../components/TicketStatusBadge';
+import TicketPriority from '../../components/TicketPriority';
 import Link from 'next/link';
 import { ArrowDown } from 'lucide-react';
 import { SearchParams } from './page';
