@@ -25,8 +25,6 @@ export async function PATCH(request: NextRequest, { params }: Props) {
     body.assignedToUserId = parseInt(body.assignedToUserId);
   }
 
-  console.log(body);
-
   const updateTicket = await prisma.ticket.update({
     where: { id: ticket.id },
     data: { ...body },

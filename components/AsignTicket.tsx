@@ -30,7 +30,6 @@ const AssignTicket = ({ ticket, users }: { ticket: Ticket; users: User[] }) => {
       });
 
     setIsAssigning(false);
-    console.log('refreshing');
 
     router.refresh();
   };

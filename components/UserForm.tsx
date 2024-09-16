@@ -48,7 +48,6 @@ const UserForm = ({ user }: Props) => {
       router.push('/tickets');
       router.refresh();
     } catch (error) {
-      console.log(error);
       setError('Unknown Error Occured.');
       setIsSubmitting(false);
     }

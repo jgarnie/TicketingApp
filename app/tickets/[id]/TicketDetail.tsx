@@ -22,8 +22,6 @@ interface Props {
 }
 
 const TicketDetail = ({ ticket, users }: Props) => {
-  console.log({ ticket });
-
   return (
     <div className="lg:grid lg:grid-cols-4">
       <Card className="mx-4 mb-4 lg:col-span-3 lg:mr-4">
